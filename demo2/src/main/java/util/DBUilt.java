@@ -1,6 +1,7 @@
 package util;
 
 import java.sql.*;
+
 /*
         JDBC工具类
 */
@@ -19,8 +20,17 @@ public class DBUilt {
         }
     }
     //  获取数据库连接对象，并返回。
-    public  Connection getConnection() throws SQLException {
-        con = DriverManager.getConnection(url,uesr,password);
+    public  Connection getConnection() {
+        try {
+            con = DriverManager.getConnection(url,uesr,password);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        if (con != null){
+            System.out.println("数据库链接成功");
+        }else {
+            System.out.println("数据库链接失败");
+        }
         return con;
     }
     public PreparedStatement creatStatement(String sql) {

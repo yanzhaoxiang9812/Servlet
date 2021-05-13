@@ -2,32 +2,33 @@ package controller;
 
 import dao.UserDao;
 import entity.User;
-import javax.servlet.*;
+
+import java.io.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
-import java.io.IOException;
-import java.io.PrintWriter;
 
-@WebServlet(name = "UserAddServlet", value = "/UserAddServlet")
+@WebServlet(name = "helloServlet", value = "/add-servlet")
 public class UserAddServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("text/html");
         String userName,password,sex,email;
         userName = request.getParameter("userName");
         password  = request.getParameter("password");
         sex = request.getParameter("sex");
-        email = request.getParameter("eamil");
-        int result = 0;
+        email = request.getParameter("email");
+        //  调用UserDao类将用户信息填充到INSERT命令中借助JDBC执行SQL命令
         UserDao ud = new UserDao();
         User user = new User(null,userName,password,sex,email);
+        int result = 0;
         result = ud.add(user);
+        //  调用想用对象将处理结果写入到响应题中。
         PrintWriter pw = null;
-        response.setContentType("text/html");
+        response.setContentType("text/html;charset=utf-8");
         pw = response.getWriter();
         if (result == 1){
-            pw.print("<font style='color: red;font-size: 12px'>注册成功</font>");
+            pw.print("<html><body><font style='color: red;font-size: 12px'>注册成功</font></body></html>");
         }else {
-            pw.print("<font style='color: red;font-size: 12px'>注册失败</font>");
+            pw.print("<html><body><font style='color: red;font-size: 12px'>注册失败</font></body></html>");
         }
     }
 }

@@ -10,7 +10,7 @@ public class UserDao {
     private DBUilt uilt = new DBUilt();
     public int add(User user){
         String sql = "insert into users(userName,password,sex,email)" +
-                "values()";
+                "values(?,?,?,?)";
         int result = 0;
         PreparedStatement ps = uilt.creatStatement(sql);
         try {
@@ -18,6 +18,7 @@ public class UserDao {
             ps.setString(2, user.getPassword());
             ps.setString(3, user.getSex());
             ps.setString(4,user.getEmail());
+            result =  ps.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }finally {
