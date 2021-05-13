@@ -43,7 +43,6 @@ public class DBUilt {
     }
     //关闭资源。
     public  void close(){
-
         if (ps != null ){
             try {
                 ps.close();
@@ -59,7 +58,6 @@ public class DBUilt {
             }
         }
     }
-
     public void close(ResultSet res) {
         if (res != null ){
             try {
