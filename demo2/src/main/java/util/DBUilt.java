@@ -27,7 +27,7 @@ public class DBUilt {
             throwables.printStackTrace();
         }
         if (con != null){
-            System.out.println("数据库链接成功");
+            System.out.println("数据库操作成功");
         }else {
             System.out.println("数据库链接失败");
         }

@@ -1,7 +1,7 @@
 package entity;
 
-public class User {
-    public User() {
+public class Users {
+    public Users() {
     }
     private Integer userId;
     private String  userName;
@@ -9,7 +9,7 @@ public class User {
     private String sex;
     private String email;
 
-    public User(Integer userId, String userName, String password, String sex, String email) {
+    public Users(Integer userId, String userName, String password, String sex, String email) {
         this.userId = userId;
         this.userName = userName;
         this.password = password;
