@@ -1,0 +1,4 @@
+如果两个servlet来自于同一个网站，并且为同一个浏览器/用户提供服务，此时借助于HttpSession对象进行数据共享
+
+HttpSession对象被称为‘会话作用域对象’
+HttpSession对象与Cookie对象实现方法是一致的。
