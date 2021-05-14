@@ -9,8 +9,11 @@ import java.io.IOException;
 public class Servlet7 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher report = request.getRequestDispatcher("/Servlet8");
-        report.forward(request,response);
+        //将数据添加到请求作用域对象中
+        request.setAttribute("key1","123");
+        request.setAttribute("key2",123);
+        //请求转发
+        request.getRequestDispatcher("/Servlet8").forward(request,response);
     }
 
     @Override
