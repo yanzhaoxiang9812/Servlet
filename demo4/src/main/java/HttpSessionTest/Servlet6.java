@@ -9,11 +9,10 @@ import java.io.IOException;
 public class Servlet6 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession s =  request.getSession();
+        System.out.println(s.getAttribute("key1"));
+        System.out.println(s.getAttribute("key2"));
+        System.out.println(s.getAttribute("key3"));
 
     }
 }

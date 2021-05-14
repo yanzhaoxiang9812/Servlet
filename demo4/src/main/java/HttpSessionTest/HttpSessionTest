@@ -1,4 +1,18 @@
-如果两个servlet来自于同一个网站，并且为同一个浏览器/用户提供服务，此时借助于HttpSession对象进行数据共享
+如果两个servlet来自于同一个网站，并且为同一个浏览器/用户提供服务，
+此时借助于HttpSession对象进行数据共享
 
 HttpSession对象被称为‘会话作用域对象’
-HttpSession对象与Cookie对象实现方法是一致的。
+
+HttpSession与Cookie的区别：
+    存储位置:
+            cookie:存放在客户端计算机（浏览器内存/硬盘)
+            HttpSession:存放在服务端计算机内存
+    数据类型:
+            cookie对象存储共享数据类型只能是string
+            httpSession对象可以存储任意类型的共享数据object
+    数据数量:
+            一个cookie对象只能存储一个共享数据
+            HttpSession使用map集合存储共享数据，所以可以存储任意数量共享数据
+    参照物：
+            cookie相当于客户在服务端【会员卡】
+            HttpSession相当于客户在服务端【私人保险柜】

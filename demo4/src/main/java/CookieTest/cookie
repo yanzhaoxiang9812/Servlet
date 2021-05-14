@@ -1,5 +1,10 @@
 如果两个servlet来自于同一个网站，并且为同一个浏览器/用户提供服务，此时借助于cookie对象进行数据共享
 
+****cookie相当于一个map
+****一个cookie中只能存放一个键值戏
+****这个键值对的key与value只能是string
+****键值对中key不能是中文
+
 
 用户通过浏览器首次向MyWeb网站发送请求申请servlet3。
 servlet3在运行期间创建一个cookie存储与当前用户相关数据
