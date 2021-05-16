@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo3" />
         <module name="demo4" />
+        <module name="demo5" />
         <module name="demo1" />
         <module name="demo2" />
       </profile>
@@ -17,6 +18,7 @@
       <module name="demo2" target="1.8" />
       <module name="demo3" target="1.8" />
       <module name="demo4" target="1.8" />
+      <module name="demo5" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
