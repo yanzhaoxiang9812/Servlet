@@ -17,7 +17,6 @@ public class UserFindServlet extends HttpServlet {
         UserDao ud = new UserDao();
         PrintWriter out = null;
         List<Users> users = ud.findAll();
-        response.setContentType("text/html;charset=utf-8");
         out = response.getWriter();
         out.print("<table border='2' align='center'>");
         out.print("<tr>");

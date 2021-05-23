@@ -10,11 +10,11 @@
         <listener-class>listener.TwoListener</listener-class>
     </listener>
     <filter>
-        <filter-name>OneFilter</filter-name>
-        <filter-class>filter.OneFilter</filter-class>
+        <filter-name>MyFilter</filter-name>
+        <filter-class>fileter.MyFilter</filter-class>
     </filter>
     <filter-mapping>
-        <filter-name>OneFilter</filter-name>
+        <filter-name>MyFilter</filter-name>
         <url-pattern>/FindAll-servlet</url-pattern>
     </filter-mapping>
 </web-app>

@@ -11,7 +11,6 @@ import javax.servlet.annotation.*;
 @WebServlet(name = "helloServlet", value = "/add-servlet")
 public class UserAddServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
         String userName,password,sex,email;
         userName = request.getParameter("userName");
         password  = request.getParameter("password");

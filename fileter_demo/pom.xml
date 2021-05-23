@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>demo6</artifactId>
+    <artifactId>fileter_demo</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>demo6</name>
+    <name>fileter_demo</name>
     <packaging>war</packaging>
 
     <properties>

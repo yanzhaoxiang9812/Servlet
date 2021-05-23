@@ -18,12 +18,8 @@ public class LogInServlet extends HttpServlet {
         password = request.getParameter("password");
         result = userDao.login(userName,password,request);
         if (result == 1){
-
-
-            //              登录成功 给令牌
-            request.getSession();
-
-
+            //登陆成功
+            HttpSession session = request.getSession();
             response.sendRedirect("user.html");
         }else {
             response.sendRedirect("login_error.html");
